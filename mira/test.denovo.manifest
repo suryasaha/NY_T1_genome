@@ -1,0 +1,13 @@
+# Example for a manifest describing a de-novo assembly with
+# unpaired Illumina data
+# First part: defining some basic things
+# In this example, we just give a name to the assembly
+# and tell MIRA it should map a genome in accurate mode
+project = MyFirstAssembly
+job = genome,denovo,accurate
+# The second part defines the sequencing data MIRA should load and assemble
+# The data is logically divided into "readgroups"
+# here comes the unpaired Illumina data
+readgroup = SomeUnpairedIlluminaReadsIGotFromTheLab
+data = ../../data/bchocwt_lane6.solexa.fastq
+technology = solexa
