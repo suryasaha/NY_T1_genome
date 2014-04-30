@@ -1,0 +1,23 @@
+# First part: defining some basic things
+project = denovoTest
+job = genome,denovo,accurate
+parameters =	-GENERAL:number_of_threads=64 \
+		COMMON_SETTINGS -NAG_AND_WARN:check_maxreadnamelength=warn \
+		SOLEXA_SETTINGS --noclipping 
+
+# The second part defines the sequencing data MIRA should load and assemble
+# The data is logically divided into "readgroups"
+readgroup = nonT1Paired
+technology = solexa
+template_size = 150 250 autorefine
+segment_placement = ---> <---
+data = /home/surya/work/workspace2/mirabait/data/fwd.paired.fastq /home/surya/work/workspace2/mirabait/data/rev.paired.fastq
+
+readgroup = nonT1FwdUnPaired
+technology = solexa
+data = /home/surya/work/workspace2/mirabait/data/fwd.unpaired.fastq
+
+readgroup = nonT1RevUnPaired
+technology = solexa
+data = /home/surya/work/workspace2/mirabait/data/rev.unpaired.fastq
+
