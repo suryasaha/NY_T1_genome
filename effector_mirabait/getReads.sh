@@ -14,8 +14,8 @@ do
 	mkdir "$NAME"; cd "$NAME"
 	cp ../"$EFF" .
 	
-	mirabait -t fastq -k 31 -n 2 "$EFF" /scratch/workspace2/data/fwd.paired.9gb-10249472_81PWHABXX_s_6.trim28.cor.quake.fastq fwd.${NAME}.baitk31n2.txt
-	mirabait -t fastq -k 31 -n 2 "$EFF" /scratch/workspace2/data/rev.paired.9gb-10249472_81PWHABXX_s_6.trim28.cor.quake.fastq rev.${NAME}.baitk31n2.txt
+	mirabait -t fastq -k 31 -n 1 "$EFF" /scratch/workspace2/data/fwd.paired.9gb-10249472_81PWHABXX_s_6.trim28.cor.quake.fastq fwd.${NAME}.baitk31n1.txt
+	mirabait -t fastq -k 31 -n 1 "$EFF" /scratch/workspace2/data/rev.paired.9gb-10249472_81PWHABXX_s_6.trim28.cor.quake.fastq rev.${NAME}.baitk31n1.txt
 	
 	cd "$WDIR"
 done
