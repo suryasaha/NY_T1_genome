@@ -1,0 +1,16 @@
+# First part: defining some basic things
+project = denovoTestDiginorm
+job = genome,denovo,accurate
+
+# The second part defines the sequencing data MIRA should load and assemble
+# The data is logically divided into "readgroups"
+readgroup = subset1_100X
+technology = solexa
+template_size = 150 250 autorefine
+segment_placement = ---> <---
+
+parameters =	-GENERAL:number_of_threads=64 \
+		COMMON_SETTINGS -NAG_AND_WARN:check_maxreadnamelength=warn:check_average_coverage=warn -HASHSTATISTICS:lossless_digital_normalisation=yes\
+		SOLEXA_SETTINGS --noclipping \
+		 		
+data = /scratch/workspace2/data/sub1.100x.fwd.paired.9gb-10249472_81PWHABXX_s_6.trim28.cor.quake.fastq  /scratch/workspace2/data/sub1.100x.rev.paired.9gb-10249472_81PWHABXX_s_6.trim28.cor.quake.fastq
