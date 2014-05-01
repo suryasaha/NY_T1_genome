@@ -2,7 +2,7 @@
 project = denovoTestDiginorm
 job = genome,denovo,accurate
 parameters =	-GENERAL:number_of_threads=64 \
-		COMMON_SETTINGS -NAG_AND_WARN:check_maxreadnamelength=warn -HASHSTATISTICS:lossless_digital_normalisation=yes\
+		COMMON_SETTINGS -NAG_AND_WARN:check_maxreadnamelength=warn:check_average_coverage=warn -HASHSTATISTICS:lossless_digital_normalisation=yes\
 		SOLEXA_SETTINGS --noclipping 
 
 # The second part defines the sequencing data MIRA should load and assemble
