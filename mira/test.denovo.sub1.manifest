@@ -1,12 +1,11 @@
 # First part: defining some basic things
-# In this example, we just give a name to the assembly
-# and tell MIRA it should map a genome in accurate mode
 project = denovoTest
 job = genome,denovo,accurate
+
 # The second part defines the sequencing data MIRA should load and assemble
 # The data is logically divided into "readgroups"
-# here comes the unpaired Illumina data
 readgroup = subset1_100X
-autopairing
-data = /scratch/workspace2/data/sub1.100x.fwd.paired.9gb-10249472_81PWHABXX_s_6.trim28.cor.quake.fastq  /scratch/workspace2/data/sub1.100x.rev.paired.9gb-10249472_81PWHABXX_s_6.trim28.cor.quake.fastq
 technology = solexa
+template_size = 150 250 autorefine
+segment_placement = ---> <---
+data = /scratch/workspace2/data/sub1.100x.fwd.paired.9gb-10249472_81PWHABXX_s_6.trim28.cor.quake.fastq  /scratch/workspace2/data/sub1.100x.rev.paired.9gb-10249472_81PWHABXX_s_6.trim28.cor.quake.fastq
